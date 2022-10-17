@@ -1,16 +1,9 @@
-# MONGODB & MONGOSH installation
-
-https://www.youtube.com/watch?v=oC6sKlhz0OE&ab_channel=CSCORNERSunitaRai
-
-# PHP installation and VSCODE config
-
-https://www.youtube.com/watch?v=SV6By0GcAoo&ab_channel=GeekyScript
-
 ## Commands:
 
 terminal cmd:
 
 - php -S localhost:3000
+- url(localhost:80/phpmyadmin) // Interface graphic of mysql
 - mongosh
 - use crud (name db name)
 - db.personas.find();
@@ -70,6 +63,20 @@ NB:
             <img src="url" alt="">
 
         <?php endif?>
+
+## connexion to database mysql
+
+      <?php
+
+      $connexion_to_data_base = mysqli_connect("localhost", "root", "", "crud_mysql_php");
+
+      if (isset($connexion_to_data_base)) {
+          echo "DataBase is connected.";
+      }
+
+## check the connexion
+
+    http://localhost/crud_mysql_php/database/database.php
 
 ## Notes
 
