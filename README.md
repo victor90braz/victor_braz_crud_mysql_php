@@ -74,9 +74,10 @@ NB:
           echo "DataBase is connected.";
       }
 
-## check the connexion
+## check the connexions
 
-    http://localhost/crud_mysql_php/database/database.php
+    http://localhost/victor_braz_crud_mysql_php/index.php
+    http://localhost/victor_braz_crud_mysql_php/database/connect_database.php
 
 ## Notes
 
