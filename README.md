@@ -1,3 +1,7 @@
+# MONGODB & MONGOSH installation
+
+https://www.youtube.com/watch?v=oC6sKlhz0OE&ab_channel=CSCORNERSunitaRai
+
 # PHP installation and VSCODE config
 
 https://www.youtube.com/watch?v=SV6By0GcAoo&ab_channel=GeekyScript
@@ -7,6 +11,22 @@ https://www.youtube.com/watch?v=SV6By0GcAoo&ab_channel=GeekyScript
 terminal cmd:
 
 - php -S localhost:3000
+- mongosh
+- use crud (name db name)
+- db.personas.find();
+
+## create collection personas
+
+- db.personas.insertOne({"paternal":"Martinez", "maternal":"Hernandez", "name": "Juan", "data_birth": "01-04-2000"});
+
+## create user
+
+- db.createUser({"user":"mongoadmin", "password":"123456",roles: [{ role: "readWrite", db: "crud"} ]});
+- mongosh -u mongoadmin -p 123456 --authenticationDatabase crud
+
+NB:
+
+- Collection.insert() is deprecated. Use insertOne, insertMany, or bulkWrite.
 
 ## Sintaxis
 

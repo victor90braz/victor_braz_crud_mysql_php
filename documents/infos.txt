@@ -1,0 +1,23 @@
+use crud;
+
+db.personas.insertOne(
+  {
+  "paternal":"Martinez", 
+  "maternal":"Hernandez", 
+  "name": "Juan", 
+  "data_birth": "01-04-2000"
+  }
+);
+
+db.createUser(
+  {
+    "user":"mongoadmin", 
+    "password":"123456",
+    roles: [
+      { 
+        role: "readWrite", 
+        db: "crud"
+      } 
+    ]
+  }
+);
