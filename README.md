@@ -3,7 +3,6 @@
 terminal cmd:
 
 - php -S localhost:3000
-- url(localhost:80/phpmyadmin) // Interface graphic of mysql
 
 ## Sintaxis
 
@@ -58,10 +57,25 @@ terminal cmd:
           echo "DataBase is connected.";
       }
 
+## sending "form" action="path complete" method(post)
+
+      <form action="/victor_braz_crud_mysql_php/database/tasks_saved/task_saved.php" method="POST">
+        <div class="form-group">
+          <input type="text" name="title" class="form-control mb-2" placeholder="Task Title" autofocus />
+        </div>
+
+        <div class="form-group mb-1">
+          <textarea name="description" rows="2" class="form-control mb-2" placeholder="Task Description"></textarea>
+        </div>
+
+        <input type="submit" class="btn btn-success btn-block" name="save_task" value="Save Task">
+      </form>
+
 ## check the connexions
 
     http://localhost/victor_braz_crud_mysql_php/index.php
     http://localhost/victor_braz_crud_mysql_php/database/connect_database.php
+    localhost:80/phpmyadmin // Interface graphic of mysql
 
 ## Notes
 
