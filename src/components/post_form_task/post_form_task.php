@@ -3,7 +3,7 @@
     <div class="col-md-4 ">
 
       <div class="card card-body">
-        <form action="" method="post">
+        <form action="/victor_braz_crud_mysql_php/src/components/post_form_task/saved_task_form.php" method="POST">
             <div class="form-group">
               <input type="text" name="title" class="form-control mb-2" placeholder="Task Title" autofocus />
             </div>
