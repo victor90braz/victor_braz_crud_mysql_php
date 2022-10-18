@@ -1,5 +1,12 @@
 # CRUD using database MySql and PHP
 
+- I started to learn MySql and PHP on 11-10-2022. My object is to build a CRUD application. I am still developing and new updates as a properly README and new features will come soon...
+
+- First project with PHP and MySql.
+  - Seeking to familiarize with the syntaxes and focusing on:
+    - building the folders structures
+    - and understanding the semantics.
+
 ## Commands:
 
 - terminal cmd:
