@@ -50,12 +50,12 @@
 
         if (isset($\_POST["save_task"])) {
 
-          echo "saving data from the post_form_task.php";
+          echo "Saving data from: post_form_task.php <br>";
 
           $title = $_POST["title"];
           $description = $_POST["description"];
 
-          echo "$title and $description";
+          echo "Title: $title <br> Description: $description";
 
         }
 
