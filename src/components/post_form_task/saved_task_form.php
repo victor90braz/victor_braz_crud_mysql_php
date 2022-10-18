@@ -7,4 +7,5 @@ if (isset($_POST["save_task"])) {
     $description = $_POST["description"];
 
     echo "$title and $description";
+
 }

@@ -28,7 +28,10 @@
 
 ## POST "form" action="file path" method(post)
 
+- post_form_task php
+
       <form action="/victor_braz_crud_mysql_php/src/components/post_form_task/saved_task_form.php" method="POST">
+
         <div class="form-group">
           <input type="text" name="title" class="form-control mb-2" placeholder="Task Title" autofocus />
         </div>
@@ -38,7 +41,23 @@
         </div>
 
         <input type="submit" class="btn btn-success btn-block" name="save_task" value="Save Task">
+
       </form>
+
+- saved_task_form php
+
+  - N.B = Take save_task from the attribute name input name="save_task"
+
+        if (isset($\_POST["save_task"])) {
+
+          echo "saving data from the post_form_task.php";
+
+          $title = $_POST["title"];
+          $description = $_POST["description"];
+
+          echo "$title and $description";
+
+        }
 
 ## Check the connexions to database mysql
 
