@@ -11,8 +11,8 @@
   <?php session_unset();}?>
 
   <div class="row ">
-    <div class="col-md-4 ">
 
+    <div class="col-md-4 ">
       <div class="card card-body">
         <form action="/victor_braz_crud_mysql_php/src/components/post_form_task/saved_task_form.php" method="POST">
 
@@ -30,8 +30,35 @@
 
           </form>
       </div>
-
-      <div class="col-md-8"></div>
     </div>
+
+    <div class="col-md-8">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Created At</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+
+$query = "SELECT * FROM task";
+$result_task = mysqli_query($connexion_to_data_base, $query);
+
+while ($row = mysqli_fetch_array($result_task)) {?>
+  <tr>
+    <td>
+      <?php echo $row['title'] ?>
+    </td>
+  </tr>
+<?php }?>
+
+        </tbody>
+      </table>
+    </div>
+
   </div>
 </div>
