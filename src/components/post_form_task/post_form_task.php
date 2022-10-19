@@ -43,16 +43,24 @@
           </tr>
         </thead>
         <tbody>
-          <?php
+
+<?php
 
 $query = "SELECT * FROM task";
 $result_task = mysqli_query($connexion_to_data_base, $query);
 
-while ($row = mysqli_fetch_array($result_task)) {?>
+foreach ($result_task as $task) {?>
   <tr>
     <td>
-      <?php echo $row['title'] ?>
+      <?php echo $task['title'] ?>
     </td>
+    <td>
+      <?php echo $task['description'] ?>
+    </td>
+    <td>
+      <?php echo $task['created_at'] ?>
+    </td>
+
   </tr>
 <?php }?>
 
