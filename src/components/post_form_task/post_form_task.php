@@ -35,11 +35,13 @@
       <table class="table table-bordered">
         <thead>
           <tr>
-<?php
+            <?php
 $tasks = ['Title', 'Description', 'Created At', 'Actions'];
 foreach ($tasks as $task): ?>
-          <th>  <?=$task?>   </th>
-          <?php endforeach?>
+  <th>
+    <?=$task?>
+  </th>
+<?php endforeach?>
           </tr>
         </thead>
 
@@ -58,8 +60,8 @@ foreach ($result_task as $task) {?>
     <?php endforeach?>
 
     <td class="">
-      <a href="./edit.php?id=<?=$task['id']?>" class="btn  btn-secondary"> <i class="fa-solid fa-pen"></i></a>
-      <a href="./delete.php?id=<?=$task['id']?>" class="btn  btn-danger"> <i class="fa-solid fa-trash-can"></i></a>
+      <a href="/victor_braz_crud_mysql_php/src/components/edit/edit.php?id=<?=$task['id']?>" class="btn  btn-secondary"> <i class="fa-solid fa-pen"></i></a>
+      <a href="/victor_braz_crud_mysql_php/src/components/delete/delete.php?id=<?=$task['id']?>" class="btn  btn-danger"> <i class="fa-solid fa-trash-can"></i></a>
     </td>
   </tr>
 <?php
