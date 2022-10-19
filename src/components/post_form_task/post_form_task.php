@@ -48,27 +48,22 @@
 
 $query = "SELECT * FROM task";
 $result_task = mysqli_query($connexion_to_data_base, $query);
-$tasks = ['title', 'description', 'created_at'];
+$data_column = ['title', 'description', 'created_at'];
 
 foreach ($result_task as $task) {?>
   <tr>
-    <td>
-      <?php echo $task['title'] ?>
-    </td>
-    <td>
-      <?php echo $task['description'] ?>
-    </td>
-    <td>
-      <?php echo $task['created_at'] ?>
-    </td>
-    <td>
+    <?php foreach ($data_column as $column): ?>
+      <td>
+        <?=$task[$column]?>
+      </td>
+    <?php endforeach?>
 
-      <a href="./edit.php?id=<?=$task['id']?>"> <i class="fa-sharp fa-solid fa-file-pen"></i></i> Edit</a>
-
+    <td>
+      <a href="./edit.php?id=<?=$task['id']?>"> <i class="fa-sharp fa-solid fa-file-pen"></i> Edit</a>
     </td>
-
   </tr>
-<?php }?>
+<?php
+}?>
 
         </tbody>
       </table>
