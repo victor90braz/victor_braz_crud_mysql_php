@@ -20,6 +20,7 @@ if (isset($_POST["save_task"])) {
     }
 
     $_SESSION["message"] = "Saved in the database.";
+    $_SESSION["message_type"] = "success";
 
     header("Location: http://localhost/victor_braz_crud_mysql_php/index.php");
 }
