@@ -1,5 +1,4 @@
 <div class="container p-4">
-
   <?php if (isset($_SESSION["message"])) {?>
       <div class="alert alert-<?=$_SESSION["message_type"]?> alert-dismissible fade show" role="alert">
           <strong>
@@ -36,16 +35,16 @@
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Created At</th>
-            <th>Actions</th>
+<?php
+$tasks = ['Title', 'Description', 'Created At', 'Actions'];
+foreach ($tasks as $task): ?>
+          <th>  <?=$task?>   </th>
+          <?php endforeach?>
           </tr>
         </thead>
+
         <tbody>
-
 <?php
-
 $query = "SELECT * FROM task";
 $result_task = mysqli_query($connexion_to_data_base, $query);
 $data_column = ['title', 'description', 'created_at'];
@@ -63,11 +62,10 @@ foreach ($result_task as $task) {?>
     </td>
   </tr>
 <?php
-}?>
-
+}
+?>
         </tbody>
       </table>
     </div>
-
   </div>
 </div>
