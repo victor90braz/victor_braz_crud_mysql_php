@@ -57,8 +57,9 @@ foreach ($result_task as $task) {?>
       </td>
     <?php endforeach?>
 
-    <td>
-      <a href="./edit.php?id=<?=$task['id']?>"> <i class="fa-sharp fa-solid fa-file-pen"></i> Edit</a>
+    <td class="">
+      <a href="./edit.php?id=<?=$task['id']?>" class="btn  btn-secondary"> <i class="fa-solid fa-pen"></i></a>
+      <a href="./delete.php?id=<?=$task['id']?>" class="btn  btn-danger"> <i class="fa-solid fa-trash-can"></i></a>
     </td>
   </tr>
 <?php
