@@ -13,6 +13,8 @@
 
     <div class="col-md-4 ">
       <div class="card card-body">
+
+        <h2>Insert Tasks Table</h2>
         <form action="/victor_braz_crud_mysql_php/src/components/post_form_task/saved_task_form.php" method="POST">
 
             <div class="form-group">
@@ -32,16 +34,15 @@
     </div>
 
     <div class="col-md-8">
+      <h2>MySql Table</h2>
       <table class="table table-bordered">
         <thead>
           <tr>
-            <?php
-$tasks = ['Title', 'Description', 'Created At', 'Actions'];
-foreach ($tasks as $task): ?>
-  <th>
-    <?=$task?>
-  </th>
-<?php endforeach?>
+            <?php $tasks = ['Title', 'Description', 'Created At', 'Actions'];foreach ($tasks as $task): ?>
+              <th>
+                <?=$task?>
+              </th>
+            <?php endforeach?>
           </tr>
         </thead>
 
@@ -52,21 +53,19 @@ $result_task = mysqli_query($connexion_to_data_base, $query);
 $data_column = ['title', 'description', 'created_at'];
 
 foreach ($result_task as $task) {?>
-  <tr>
-    <?php foreach ($data_column as $column): ?>
-      <td>
-        <?=$task[$column]?>
-      </td>
-    <?php endforeach?>
+        <tr>
+          <?php foreach ($data_column as $column): ?>
+            <td>
+              <?=$task[$column]?>
+            </td>
+          <?php endforeach?>
 
-    <td class="">
-      <a href="/victor_braz_crud_mysql_php/src/components/edit/edit.php?id=<?=$task['id']?>" class="btn  btn-secondary"> <i class="fa-solid fa-pen"></i></a>
-      <a href="/victor_braz_crud_mysql_php/src/components/delete/delete.php?id=<?=$task['id']?>" class="btn  btn-danger"> <i class="fa-solid fa-trash-can"></i></a>
-    </td>
-  </tr>
-<?php
-}
-?>
+            <td class="">
+              <a href="/victor_braz_crud_mysql_php/src/components/edit/edit.php?id=<?=$task['id']?>" class="btn  btn-secondary"> <i class="fa-solid fa-pen"></i></a>
+              <a href="/victor_braz_crud_mysql_php/src/components/delete/delete.php?id=<?=$task['id']?>" class="btn  btn-danger"> <i class="fa-solid fa-trash-can"></i></a>
+            </td>
+        </tr>
+<?php }?>
         </tbody>
       </table>
     </div>

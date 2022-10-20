@@ -1,4 +1,5 @@
 <?php
+
 include "/xampp/htdocs/victor_braz_crud_mysql_php/database/connect_database.php";
 
 if (isset($_GET['id'])) {
